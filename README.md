@@ -8,7 +8,7 @@
 
 SwiftySegmentedControl is an easy to use, customizable replacement for UISegmentedControl and UISwitch written in Swift.
 
-![Demo](https://github.com/gmarm/SwiftySegmentedControl/blob/master/demo.gif)
+![Demo](https://github.com/PlayApple/SwiftySegmentedControl/Readme/preview.gif)
 
 ## Features
 
