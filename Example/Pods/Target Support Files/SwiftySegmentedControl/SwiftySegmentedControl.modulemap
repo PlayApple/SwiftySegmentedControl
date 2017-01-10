@@ -1,6 +1,0 @@
-framework module SwiftySegmentedControl {
-  umbrella header "SwiftySegmentedControl-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_SwiftySegmentedControl {
-  umbrella header "Pods-SwiftySegmentedControl-umbrella.h"
-
-  export *
-  module * { export * }
-}
