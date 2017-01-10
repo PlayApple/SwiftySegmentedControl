@@ -1,0 +1,16 @@
+PODS:
+  - SwiftySegmentedControl (0.0.1)
+
+DEPENDENCIES:
+  - SwiftySegmentedControl (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftySegmentedControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftySegmentedControl: 79e4e2569296f402d5adc16577416cf42fce43e5
+
+PODFILE CHECKSUM: 2ec654abe739be90fd8b1a65abe7fa9189accbc0
+
+COCOAPODS: 1.2.0.beta.1

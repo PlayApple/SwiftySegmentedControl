@@ -1,0 +1,6 @@
+framework module Pods_SwiftySegmentedControlExampleTests {
+  umbrella header "Pods-SwiftySegmentedControlExampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
