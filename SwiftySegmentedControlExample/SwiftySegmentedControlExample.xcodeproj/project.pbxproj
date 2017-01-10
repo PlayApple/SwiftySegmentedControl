@@ -16,6 +16,9 @@
 		E00EBEC91E2493680046F322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00EBEC71E2493680046F322 /* LaunchScreen.storyboard */; };
 		E00EBED41E2493680046F322 /* SwiftySegmentedControlExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00EBED31E2493680046F322 /* SwiftySegmentedControlExampleTests.swift */; };
 		E00EBEDF1E2493680046F322 /* SwiftySegmentedControlExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00EBEDE1E2493680046F322 /* SwiftySegmentedControlExampleUITests.swift */; };
+		E00EBEF01E2497300046F322 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E00EBEED1E2497300046F322 /* LICENSE */; };
+		E00EBEF11E2497300046F322 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E00EBEEE1E2497300046F322 /* README.md */; };
+		E00EBEF21E2497300046F322 /* SwiftySegmentedControl.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E00EBEEF1E2497300046F322 /* SwiftySegmentedControl.podspec */; };
 		FAE76F2FC1500C84A0F152D4 /* Pods_SwiftySegmentedControlExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AA1B705A4492B5B10D2FDC /* Pods_SwiftySegmentedControlExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		E00EBEDA1E2493680046F322 /* SwiftySegmentedControlExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySegmentedControlExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00EBEDE1E2493680046F322 /* SwiftySegmentedControlExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySegmentedControlExampleUITests.swift; sourceTree = "<group>"; };
 		E00EBEE01E2493680046F322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E00EBEED1E2497300046F322 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E00EBEEE1E2497300046F322 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E00EBEEF1E2497300046F322 /* SwiftySegmentedControl.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftySegmentedControl.podspec; path = ../SwiftySegmentedControl.podspec; sourceTree = "<group>"; };
 		F7A6C99225ED95C3212DBD59 /* Pods-SwiftySegmentedControlExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySegmentedControlExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySegmentedControlExampleTests/Pods-SwiftySegmentedControlExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,7 @@
 		E00EBEB21E2493670046F322 = {
 			isa = PBXGroup;
 			children = (
+				E00EBEEC1E2497210046F322 /* Podspec Metadata */,
 				E00EBEBD1E2493670046F322 /* SwiftySegmentedControlExample */,
 				E00EBED21E2493680046F322 /* SwiftySegmentedControlExampleTests */,
 				E00EBEDD1E2493680046F322 /* SwiftySegmentedControlExampleUITests */,
@@ -163,6 +170,16 @@
 				E00EBEE01E2493680046F322 /* Info.plist */,
 			);
 			path = SwiftySegmentedControlExampleUITests;
+			sourceTree = "<group>";
+		};
+		E00EBEEC1E2497210046F322 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				E00EBEED1E2497300046F322 /* LICENSE */,
+				E00EBEEE1E2497300046F322 /* README.md */,
+				E00EBEEF1E2497300046F322 /* SwiftySegmentedControl.podspec */,
+			);
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E00EBEC91E2493680046F322 /* LaunchScreen.storyboard in Resources */,
+				E00EBEF21E2497300046F322 /* SwiftySegmentedControl.podspec in Resources */,
 				E00EBEC61E2493680046F322 /* Assets.xcassets in Resources */,
+				E00EBEF01E2497300046F322 /* LICENSE in Resources */,
 				E00EBEC41E2493670046F322 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00EBEF11E2497300046F322 /* README.md in Sources */,
 				E00EBEC11E2493670046F322 /* ViewController.swift in Sources */,
 				E00EBEBF1E2493670046F322 /* AppDelegate.swift in Sources */,
 			);
@@ -707,6 +727,7 @@
 				E00EBEE51E2493680046F322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E00EBEE61E2493680046F322 /* Build configuration list for PBXNativeTarget "SwiftySegmentedControlExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +736,7 @@
 				E00EBEE81E2493680046F322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E00EBEE91E2493680046F322 /* Build configuration list for PBXNativeTarget "SwiftySegmentedControlExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +745,7 @@
 				E00EBEEB1E2493680046F322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
