@@ -35,15 +35,15 @@
 
 /* Begin PBXFileReference section */
 		0338C41A88594E74E42D5F81E5AE5C05 /* SwiftySegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySegmentedControl-prefix.pch"; sourceTree = "<group>"; };
-		0CA84F8057755EB969D4A3E0114004BB /* Pods-SwiftySegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySegmentedControl.modulemap"; sourceTree = "<group>"; };
-		1511CB3B3CBE85B704D1CAC8B08AD28D /* Pods_SwiftySegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySegmentedControl.framework; path = "Pods-SwiftySegmentedControl.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CA84F8057755EB969D4A3E0114004BB /* Pods-SwiftySegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftySegmentedControl.modulemap"; sourceTree = "<group>"; };
+		1511CB3B3CBE85B704D1CAC8B08AD28D /* Pods_SwiftySegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FEAE047AE092C8FB4C4657237E5CE9 /* Pods-SwiftySegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		27B383AAD686EA886F589E6210905F4A /* SwiftySegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySegmentedControl.xcconfig; sourceTree = "<group>"; };
 		28C5234BCC2EA7CD2233493535A97EB6 /* Pods-SwiftySegmentedControl-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControl-resources.sh"; sourceTree = "<group>"; };
 		2B90D9EF4FCD4387DF385601305DDEDD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328D385C967C8EC47D9BC1365AD91961 /* Pods-SwiftySegmentedControlUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySegmentedControlUITests-dummy.m"; sourceTree = "<group>"; };
 		37D6386F3F9C04E32AB7FA51C4A8D235 /* Pods-SwiftySegmentedControlUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySegmentedControlUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F4C69D1DD889F89116F5C021ECD796F /* Pods_SwiftySegmentedControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySegmentedControlTests.framework; path = "Pods-SwiftySegmentedControlTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4C69D1DD889F89116F5C021ECD796F /* Pods_SwiftySegmentedControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySegmentedControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C1692879099B207FFC699E037D9A84 /* SwiftySegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftySegmentedControl.swift; sourceTree = "<group>"; };
 		45E58B8B291C6438ADFFC7747805E777 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D76814A4406C39626EC0226E5B2490 /* Pods-SwiftySegmentedControlUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySegmentedControlUITests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -51,26 +51,26 @@
 		5D8C468844FE435EDCB09F35883CCEA4 /* Pods-SwiftySegmentedControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySegmentedControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FDC0381B3A4628EF668281AFA73D087 /* SwiftySegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66300F3C87A5D73431B72C4E85C9CA20 /* SwiftySegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySegmentedControl.framework; path = SwiftySegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66300F3C87A5D73431B72C4E85C9CA20 /* SwiftySegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftySegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D21BED7D33FFABD768E56231FBA47D4 /* Pods-SwiftySegmentedControl-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControl-frameworks.sh"; sourceTree = "<group>"; };
 		769BD49F0038A020C25A1D6C5D8037B5 /* Pods-SwiftySegmentedControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySegmentedControlTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AD5BCB854C43318D790BED7063BF018 /* Pods-SwiftySegmentedControlUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControlUITests-frameworks.sh"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7F43DC94DF69CAE5200C054940897944 /* Pods-SwiftySegmentedControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySegmentedControlUITests.release.xcconfig"; sourceTree = "<group>"; };
-		82C5000D78C93A9A8534F53CDD44D2AC /* Pods_SwiftySegmentedControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySegmentedControlUITests.framework; path = "Pods-SwiftySegmentedControlUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C5000D78C93A9A8534F53CDD44D2AC /* Pods_SwiftySegmentedControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySegmentedControlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8518ED1A3C6A44930CCDD897788A8A40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F7C67AFC7BA63A21E85EEC6C08CBEC /* Pods-SwiftySegmentedControlTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControlTests-resources.sh"; sourceTree = "<group>"; };
 		8D39C2C1B08146D5E9B89C1A8EC6E8FF /* Pods-SwiftySegmentedControl-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySegmentedControl-acknowledgements.markdown"; sourceTree = "<group>"; };
 		91FBB77B311825CEB27E90BE6D190FF3 /* Pods-SwiftySegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		91FCBC71E93C6EA22EC158A62ED04825 /* Pods-SwiftySegmentedControlTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySegmentedControlTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9901F438539DCD0019E0BCD7E1D8D583 /* SwiftySegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftySegmentedControl.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9901F438539DCD0019E0BCD7E1D8D583 /* SwiftySegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftySegmentedControl.modulemap; sourceTree = "<group>"; };
 		A1D088B1B3CC5E6C40EB2643C2921095 /* Pods-SwiftySegmentedControlTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControlTests-frameworks.sh"; sourceTree = "<group>"; };
 		AE67294BCB14C3EE10FB2A147986E686 /* Pods-SwiftySegmentedControlTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySegmentedControlTests-dummy.m"; sourceTree = "<group>"; };
 		B7DD2D9EAA2936DA2DBB8D04CE9406A3 /* Pods-SwiftySegmentedControlTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySegmentedControlTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B926179636EF338727055BE154922556 /* Pods-SwiftySegmentedControlUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySegmentedControlUITests.modulemap"; sourceTree = "<group>"; };
+		B926179636EF338727055BE154922556 /* Pods-SwiftySegmentedControlUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftySegmentedControlUITests.modulemap"; sourceTree = "<group>"; };
 		C3D10FF3E8D74AE675BC632F9C64EEC3 /* Pods-SwiftySegmentedControl-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySegmentedControl-acknowledgements.plist"; sourceTree = "<group>"; };
-		C8827D89166120E9ADCA2C1372D9C60F /* Pods-SwiftySegmentedControlTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySegmentedControlTests.modulemap"; sourceTree = "<group>"; };
+		C8827D89166120E9ADCA2C1372D9C60F /* Pods-SwiftySegmentedControlTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftySegmentedControlTests.modulemap"; sourceTree = "<group>"; };
 		CBB9EB28623F1666C037C46474830EE5 /* Pods-SwiftySegmentedControlTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySegmentedControlTests-umbrella.h"; sourceTree = "<group>"; };
 		D549A8B2F6770E6DB52DA5F702942275 /* Pods-SwiftySegmentedControlUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySegmentedControlUITests-resources.sh"; sourceTree = "<group>"; };
 		D6B031329225653086B838A2D00BCA57 /* Pods-SwiftySegmentedControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySegmentedControlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 			children = (
 				45C1692879099B207FFC699E037D9A84 /* SwiftySegmentedControl.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -225,7 +224,6 @@
 			children = (
 				B6C32392A1A0CFED087208518B020D79 /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -384,7 +382,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -569,14 +567,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -590,6 +592,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -782,15 +785,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",

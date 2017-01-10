@@ -102,7 +102,7 @@
 		E0216CE01E247F1B003C1E6B = {
 			isa = PBXGroup;
 			children = (
-				E0216CEB1E247F1B003C1E6B /* SwiftySegmentedControl */,
+				E0216CEB1E247F1B003C1E6B /* Example for SwiftySegmentedControl */,
 				E0216D001E247F1B003C1E6B /* SwiftySegmentedControlTests */,
 				E0216D0B1E247F1C003C1E6B /* SwiftySegmentedControlUITests */,
 				E0216CEA1E247F1B003C1E6B /* Products */,
@@ -121,7 +121,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E0216CEB1E247F1B003C1E6B /* SwiftySegmentedControl */ = {
+		E0216CEB1E247F1B003C1E6B /* Example for SwiftySegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
 				E0216CEC1E247F1B003C1E6B /* AppDelegate.swift */,
@@ -131,6 +131,7 @@
 				E0216CF51E247F1B003C1E6B /* LaunchScreen.storyboard */,
 				E0216CF81E247F1B003C1E6B /* Info.plist */,
 			);
+			name = "Example for SwiftySegmentedControl";
 			path = SwiftySegmentedControl;
 			sourceTree = "<group>";
 		};
@@ -707,6 +708,7 @@
 				E0216D131E247F1C003C1E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0216D141E247F1C003C1E6B /* Build configuration list for PBXNativeTarget "SwiftySegmentedControlTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +717,7 @@
 				E0216D161E247F1C003C1E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0216D171E247F1C003C1E6B /* Build configuration list for PBXNativeTarget "SwiftySegmentedControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +726,7 @@
 				E0216D191E247F1C003C1E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
