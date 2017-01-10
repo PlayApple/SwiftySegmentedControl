@@ -194,6 +194,12 @@ import UIKit
     }
     
     // MARK: - Private properties
+    fileprivate let contentScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        return scrollView
+    }()
     fileprivate let titleLabelsView = UIView()
     fileprivate let selectedTitleLabelsView = UIView()
     fileprivate let indicatorView = IndicatorView()
@@ -209,6 +215,19 @@ import UIKit
     fileprivate var selectedTitleLabels: [UILabel] { return selectedTitleLabelsView.subviews as! [UILabel] }
     fileprivate var totalInsetSize: CGFloat { return indicatorViewInset * 2.0 }
     fileprivate lazy var defaultTitles: [String] = { return ["First", "Second"] }()
+    fileprivate var titlesWidth: [CGFloat] {
+        return titles.map {
+            let statusLabelText: NSString = $0 as NSString
+            let size = CGSize(width: width, height: height - totalInsetSize)
+            let dic = NSDictionary(object: titleFont,
+                                   forKey: NSFontAttributeName as NSCopying)
+            let strSize = statusLabelText.boundingRect(with: size,
+                                                       options: .usesLineFragmentOrigin,
+                                                       attributes: dic as? [String : AnyObject],
+                                                       context: nil).size
+            return strSize.width
+        }
+    }
     
     // MARK: Lifecycle
     required public init?(coder aDecoder: NSCoder) {
@@ -235,6 +254,7 @@ import UIKit
         self.indicatorViewBackgroundColor = indicatorViewBackgroundColor
         finishInit()
     }
+    
     @available(*, deprecated, message: "Use init(frame:titles:index:backgroundColor:titleColor:indicatorViewBackgroundColor:selectedTitleColor:) instead.")
     convenience override public init(frame: CGRect) {
         self.init(frame: frame,
@@ -256,12 +276,15 @@ import UIKit
                   indicatorViewBackgroundColor: Color.indicatorViewBackground,
                   selectedTitleColor: Color.selectedTitle)
     }
+
+    
     fileprivate func finishInit() {
         layer.masksToBounds = true
         
-        addSubview(titleLabelsView)
-        addSubview(indicatorView)
-        addSubview(selectedTitleLabelsView)
+        addSubview(contentScrollView)
+        contentScrollView.addSubview(titleLabelsView)
+        contentScrollView.addSubview(indicatorView)
+        contentScrollView.addSubview(selectedTitleLabelsView)
         selectedTitleLabelsView.layer.mask = indicatorView.titleMaskView.layer
         
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SwiftySegmentedControl.tapped(_:)))
@@ -276,6 +299,10 @@ import UIKit
         guard titleLabelsCount > 1 else {
             return
         }
+        
+        contentScrollView.frame = bounds
+        let allElementsWidth = titlesWidth.reduce(0, {$0 + $1})
+        contentScrollView.contentSize = CGSize(width: max(allElementsWidth, width), height: 0)
         
         titleLabelsView.frame = bounds
         selectedTitleLabelsView.frame = bounds
@@ -305,6 +332,21 @@ import UIKit
         let oldIndex = self.index
         self.index = index
         moveIndicatorViewToIndex(animated, shouldSendEvent: (self.index != oldIndex || alwaysAnnouncesValue))
+        fixedScrollViewOffset(Int(self.index))
+    }
+    
+    // MARK: Fixed ScrollView offset
+    fileprivate func fixedScrollViewOffset(_ focusIndex: Int) {
+        guard contentScrollView.contentSize.width > width else {
+            return
+        }
+        
+        let targetMidX = self.titleLabels[Int(self.index)].frame.midX
+        let offsetX = contentScrollView.contentOffset.x
+        let addOffsetX = targetMidX - offsetX - width / 2
+        let newOffSetX = min(max(0, offsetX + addOffsetX), contentScrollView.contentSize.width - width)
+        let point = CGPoint(x: newOffSetX, y: contentScrollView.contentOffset.y)
+        contentScrollView.setContentOffset(point, animated: true)
     }
     
     // MARK: Animations

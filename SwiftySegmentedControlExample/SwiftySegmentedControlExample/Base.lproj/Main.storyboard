@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6F-Ac-bh2" userLabel="Swifty Segmented Control 1" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
-                                <rect key="frame" x="16" y="91" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d03-gs-SP7" userLabel="Swifty Segmented Control 1" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
+                                <rect key="frame" x="16" y="109" width="343" height="45"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="VYh-en-fHW"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
@@ -32,24 +35,23 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="indicatorViewBackgroundColor">
                                         <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
                                         <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorViewInset">
-                                        <real key="value" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="segmentedControl1ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="10F-aA-hyT"/>
+                                    <action selector="segmentedControl1ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LyC-VR-zbD"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-D9-d0L" userLabel="Swifty Segmented Control 2" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
-                                <rect key="frame" x="16" y="165" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-D9-d0L" userLabel="Swifty Segmented Control 2" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
+                                <rect key="frame" x="16" y="185" width="343" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5OT-Oe-ByF"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
@@ -68,10 +70,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z67-T6-eYU" userLabel="Swifty Segmented Control 3" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
-                                <rect key="frame" x="16" y="238" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z67-T6-eYU" userLabel="Swifty Segmented Control 3" customClass="SwiftySegmentedControl" customModule="SwiftySegmentedControl">
+                                <rect key="frame" x="16" y="267" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.61771763390000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qac-fR-m7b"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="3"/>
@@ -90,12 +94,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control from storyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-6b-4Br">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ze-6b-4Br" secondAttribute="trailing" id="0qs-wQ-pjM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IKJ-D9-d0L" secondAttribute="leading" id="8hB-R5-vWm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IKJ-D9-d0L" secondAttribute="trailing" id="Dcj-TQ-uON"/>
+                            <constraint firstItem="z67-T6-eYU" firstAttribute="top" secondItem="IKJ-D9-d0L" secondAttribute="bottom" constant="37" id="FiQ-be-Cei"/>
+                            <constraint firstItem="d03-gs-SP7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="I7Y-1B-ogk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="d03-gs-SP7" secondAttribute="leading" id="ISM-m3-CzP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z67-T6-eYU" secondAttribute="trailing" id="ITH-dl-Vq8"/>
+                            <constraint firstItem="0ze-6b-4Br" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="XD7-Tu-O3E"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0ze-6b-4Br" secondAttribute="leading" id="Xgk-jZ-NcE"/>
+                            <constraint firstItem="z67-T6-eYU" firstAttribute="top" secondItem="d03-gs-SP7" secondAttribute="bottom" constant="113" id="fZY-rA-ulr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="z67-T6-eYU" secondAttribute="leading" id="rh4-pg-u36"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d03-gs-SP7" secondAttribute="trailing" id="yAh-53-eSM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zf2-ex-eqG"/>
                     <connections>
-                        <outlet property="segmentedControl1" destination="u6F-Ac-bh2" id="5uc-fA-Vwy"/>
+                        <outlet property="segmentedControl1" destination="d03-gs-SP7" id="WWB-h6-y0O"/>
                         <outlet property="segmentedControl2" destination="IKJ-D9-d0L" id="CA0-zV-GHD"/>
                         <outlet property="segmentedControl3" destination="z67-T6-eYU" id="mgO-jh-FNo"/>
                     </connections>

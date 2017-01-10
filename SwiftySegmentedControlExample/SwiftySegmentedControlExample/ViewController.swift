@@ -110,7 +110,7 @@ extension ViewController {
     fileprivate func setupControl4() {
         // Control 4: Added as a subview
         let viewSegmentedControl = SwiftySegmentedControl(
-            frame: CGRect(x: 0.0, y: 302.0, width: view.bounds.width, height: 50.0),
+            frame: CGRect(x: 0.0, y: 345.0, width: view.bounds.width, height: 50.0),
             titles: ["Artists", "Albums"],
             index: 1,
             backgroundColor: UIColor(red:0.11, green:0.12, blue:0.13, alpha:1.00),
