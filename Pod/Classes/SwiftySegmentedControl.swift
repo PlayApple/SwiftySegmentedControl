@@ -14,6 +14,8 @@ import UIKit
     fileprivate class IndicatorView: UIView {
         // MARK: Properties
         fileprivate let titleMaskView = UIView()
+        fileprivate let line = UIView()
+        fileprivate let lineHeight: CGFloat = 2.0
         fileprivate var cornerRadius: CGFloat = 0 {
             didSet {
                 layer.cornerRadius = cornerRadius
@@ -23,6 +25,14 @@ import UIKit
         override open var frame: CGRect {
             didSet {
                 titleMaskView.frame = frame
+                let lineFrame = CGRect(x: 0, y: frame.size.height - lineHeight, width: frame.size.width, height: lineHeight)
+                line.frame = lineFrame
+            }
+        }
+        
+        open var lineColor = UIColor.clear {
+            didSet {
+                line.backgroundColor = lineColor
             }
         }
         
@@ -38,6 +48,12 @@ import UIKit
         fileprivate func finishInit() {
             layer.masksToBounds = true
             titleMaskView.backgroundColor = UIColor.black
+            addSubview(line)
+        }
+        
+        override open func layoutSubviews() {
+            super.layoutSubviews()
+            
         }
     }
     
@@ -134,6 +150,10 @@ import UIKit
             indicatorView.backgroundColor = newValue
         }
     }
+    /// Margin spacing between titles. Default to 33.
+    @IBInspectable public var marginSpace: CGFloat = 33 {
+        didSet { setNeedsLayout() }
+    }
     /// The indicator view's inset. Defaults to 2.0
     @IBInspectable public var indicatorViewInset: CGFloat = 2.0 {
         didSet { setNeedsLayout() }
@@ -154,6 +174,15 @@ import UIKit
         }
         set {
             indicatorView.layer.borderColor = newValue
+        }
+    }
+    /// The indicator view's line color
+    public var indicatorViewLineColor: UIColor {
+        get {
+            return indicatorView.lineColor
+        }
+        set {
+            indicatorView.lineColor = newValue
         }
     }
     /// The text color of the non-selected titles / options
@@ -301,7 +330,7 @@ import UIKit
         }
         
         contentScrollView.frame = bounds
-        let allElementsWidth = titlesWidth.reduce(0, {$0 + $1})
+        let allElementsWidth = titlesWidth.reduce(0, {$0 + $1}) + CGFloat(titleLabelsCount) * marginSpace
         contentScrollView.contentSize = CGSize(width: max(allElementsWidth, width), height: 0)
         
         titleLabelsView.frame = bounds
@@ -376,11 +405,27 @@ import UIKit
     
     // MARK: Helpers
     fileprivate func elementFrame(forIndex index: UInt) -> CGRect {
-        let elementWidth = (width - totalInsetSize) / CGFloat(titleLabelsCount)
-        return CGRect(x: CGFloat(index) * elementWidth + indicatorViewInset,
-                      y: indicatorViewInset,
-                      width: elementWidth,
-                      height: height - totalInsetSize)
+        // 计算出label的宽度，label宽度 = (text宽度) + marginSpace
+        // | <= 0.5 * marginSpace => text1 <= 0.5 * marginSpace => | <= 0.5 * marginSpace => text2 <= 0.5 * marginSpace => |
+        // 如果总宽度小于bunds.width，则均分宽度 label宽度 = bunds.width / count
+        let allElementsWidth = titlesWidth.reduce(0, {$0 + $1}) + CGFloat(titleLabelsCount) * marginSpace
+        if allElementsWidth < width {
+            let elementWidth = (width - totalInsetSize) / CGFloat(titleLabelsCount)
+            return CGRect(x: CGFloat(index) * elementWidth + indicatorViewInset,
+                          y: indicatorViewInset,
+                          width: elementWidth,
+                          height: height - totalInsetSize)
+        } else {
+            let titlesWidth = self.titlesWidth
+            let frontTitlesWidth = titlesWidth.enumerated().reduce(CGFloat(0)) { (total, current) in
+                return current.0 < Int(index) ? total + current.1 : total
+            }
+            let x = frontTitlesWidth + CGFloat(index) * marginSpace
+            return CGRect(x: x,
+                          y: indicatorViewInset,
+                          width: titlesWidth[Int(index)] + marginSpace,
+                          height: height - totalInsetSize)
+        }
     }
     fileprivate func nearestIndex(toPoint point: CGPoint) -> UInt {
         let distances = titleLabels.map { abs(point.x - $0.center.x) }
@@ -393,7 +438,7 @@ import UIKit
     
     // MARK: Action handlers
     @objc fileprivate func tapped(_ gestureRecognizer: UITapGestureRecognizer!) {
-        let location = gestureRecognizer.location(in: self)
+        let location = gestureRecognizer.location(in: contentScrollView)
         try! setIndex(nearestIndex(toPoint: location))
     }
     @objc fileprivate func panned(_ gestureRecognizer: UIPanGestureRecognizer!) {
@@ -420,7 +465,7 @@ import UIKit
 extension SwiftySegmentedControl: UIGestureRecognizerDelegate {
     override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer == panGestureRecognizer {
-            return indicatorView.frame.contains(gestureRecognizer.location(in: self))
+            return indicatorView.frame.contains(gestureRecognizer.location(in: contentScrollView))
         }
         return super.gestureRecognizerShouldBegin(gestureRecognizer)
     }

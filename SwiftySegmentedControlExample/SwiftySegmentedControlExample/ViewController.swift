@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         setupControl2()
         setupControl3()
         setupControl4()
+        setupControl5()
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,7 +84,8 @@ extension ViewController {
 extension ViewController {
     /// Control 2: Exclusively defined in IB
     fileprivate func setupControl2() {
-        
+//        segmentedControl2.indicatorViewBorderWidth = 3
+//        segmentedControl2.indicatorViewBorderColor = UIColor.blue.cgColor
     }
 }
 
@@ -104,6 +106,7 @@ extension ViewController {
         }
         try! segmentedControl3.setIndex(2, animated: false)
     }
+    
 }
 
 extension ViewController {
@@ -123,6 +126,29 @@ extension ViewController {
         viewSegmentedControl.selectedTitleFont = UIFont(name: "HelveticaNeue", size: 16.0)!
         viewSegmentedControl.bouncesOnChange = false
         viewSegmentedControl.panningDisabled = true
+        view.addSubview(viewSegmentedControl)
+    }
+}
+
+extension ViewController {
+    fileprivate func setupControl5() {
+        // Control 5: Supported scorll
+        let viewSegmentedControl = SwiftySegmentedControl(
+            frame: CGRect(x: 0.0, y: 430.0, width: view.bounds.width, height: 50.0),
+            titles: ["All", "New", "Pictures", "One", "Two", "Three", "Four", "Five", "Six", "Artists", "Albums", "Recent"],
+            index: 1,
+            backgroundColor: UIColor(red:0.11, green:0.12, blue:0.13, alpha:1.00),
+            titleColor: .white,
+            indicatorViewBackgroundColor: UIColor(red:0.11, green:0.12, blue:0.13, alpha:1.00),
+            selectedTitleColor: UIColor(red:0.97, green:0.00, blue:0.24, alpha:1.00))
+        viewSegmentedControl.autoresizingMask = [.flexibleWidth]
+        viewSegmentedControl.indicatorViewInset = 0
+        viewSegmentedControl.cornerRadius = 0.0
+        viewSegmentedControl.titleFont = UIFont(name: "HelveticaNeue", size: 16.0)!
+        viewSegmentedControl.selectedTitleFont = UIFont(name: "HelveticaNeue", size: 16.0)!
+        viewSegmentedControl.bouncesOnChange = false
+        viewSegmentedControl.panningDisabled = true
+        viewSegmentedControl.indicatorViewLineColor = UIColor.red
         view.addSubview(viewSegmentedControl)
     }
 }
