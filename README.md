@@ -32,7 +32,7 @@ it, simply add the following line to your Podfile:
 
 _Swift 3.0_
 ```ruby
-pod 'SwiftySegmentedControl', '~> 0.7'
+pod 'SwiftySegmentedControl'
 ```
 
 ### Manually
